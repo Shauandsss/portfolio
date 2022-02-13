@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  overflow: hidden; /* Hide scrollbars */
 }
 
 .App-logo {
@@ -35,4 +42,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.pointer {
+  object-fit: cover;
+  width: calc(3vw + 3vh + 4vmin);
+  height: calc(1vw + 1vh + 1vmin);
+  position: fixed;
+  z-index: 1;
+  opacity: .7;
+  transition: 1s all ease;
+}
+
+.pointerUp:hover {
+  transform: scale(1.2);
+}
+
+.pointerDown:hover {
+  transform: scale(1.2);
+  transform: rotate(180deg);
+}
+
+.pointerUp {
+  bottom:0;
+}
+
+.pointerDown {
+  top:0;
+  transform: rotate(180deg);
+}
+
+@media (max-width:760px) {
+
 }
