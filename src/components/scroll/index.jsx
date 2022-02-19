@@ -19,7 +19,7 @@ function Scroll() {
         <div className="container">
 
 
-            <div>
+            {/*<div>
                 <div id='c1' className="container-item c1">
                     
                     <div className='bottle' onMouseOver={fill} >
@@ -39,10 +39,10 @@ function Scroll() {
 
                         </div>
                         
-                       {/*<img src={biohazard} className="logo-biohazard" />*/}
+                       <img src={biohazard} className="logo-biohazard" />
                     </div>
-                    {/*<img src={backgroundC1} className="background"/>*/}
-                </div>
+                    <img src={backgroundC1} className="background"/>
+            </div>
 
 
                 <div id='c2' className="container-item c2"></div>
@@ -53,7 +53,7 @@ function Scroll() {
                 <div id='c7' className="container-item c7"></div>
                 <div id='c8' className="container-item c8"></div>
                 <div id='c9' className="container-item c9"></div>
-            </div>
+            </div>*/}
         </div>
     );
   }

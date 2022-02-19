@@ -148,6 +148,7 @@
     }
     .ball {
         margin-left: 50%;
+        margin-top: 50%;
     }
 }
 
@@ -173,6 +174,16 @@
     transition: 2s all ease;
 }
   
+.ball3 {
+    margin-top: 20%;
+    margin-left: 80%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    transform-style: preserve-3d;  
+    transform: rotateX(-5deg);
+    transition: 2s all ease;
+}
   
 @keyframes rot{
     0% { transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg); }
@@ -195,6 +206,15 @@
     left: 0px;
     width: 20vmin;
     height: 20vmin;
+}
+
+.layer3 {
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    width: 10vmin;
+    height: 10vmin;
 }
   
 .moving {
@@ -220,6 +240,11 @@
 }
   
 .laser2 { 
+    background-color: rgba(0, 0, 0, 0.05);
+    transform:  translateX(-27.0128%) translateY(-27.0128%) rotateY(90deg) translateX(-27.0128%) rotateY(-135deg) rotateX(45deg) scale(0.2) translateY(-35%);
+}
+
+.laser3 { 
     background-color: rgba(0, 0, 0, 0.05);
     transform:  translateX(-27.0128%) translateY(-27.0128%) rotateY(90deg) translateX(-27.0128%) rotateY(-135deg) rotateX(45deg) scale(0.2) translateY(-35%);
 }
@@ -254,6 +279,15 @@
     height: 400%;
     animation: highlightanim 10s linear infinite;
 }   
+
+@media (max-width:760px) {
+    .ball {
+        margin-left: 50%;
+        margin-top: 70%;
+    }
+}
+
+
 
 .buttonChange {
     

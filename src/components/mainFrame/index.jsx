@@ -58,10 +58,12 @@ function Header( {func, mainColor, complementaryColor} ) {
                     </div>
                 </div>
             </div>
+
             <div alt ='Change things'className='rainbow-button' 
             style={{backgroundColor: mainColor,
                     color: complementaryColor,
-                    textShadow: '4px 4px 4px ' + mainColor}} onClick={func}>
+                    textShadow: '4px 4px 4px ' + mainColor,
+                    transition: '1s all ease'}} onClick={func}>
             </div>
     </div>
     );

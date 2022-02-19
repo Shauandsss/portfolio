@@ -19,9 +19,6 @@ function Header( props ) {
           <li>
             <a style={someStyle}  target="_blank" title="About me"></a>
           </li>
-          <li>
-            <a style={someStyle}  target="_blank" title="Contact me"></a>
-          </li>
         </ul>
       </div>
     );

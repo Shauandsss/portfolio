@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './App.css';
 import Header from './components/header'
 import MainFrame from './components/mainFrame'
+import Contact from './components/contact'
+/*
 import Scroll from './components/scroll'
-import pointer from './images/pointer.png';
+import pointer from './images/pointer.png';*/
 
 function App() {
   /*const[scrollNumber, setScrollNumber] = useState(0) 
@@ -33,9 +35,9 @@ function App() {
     }, [r,g,b])
 
   const setRandomColor = () => {
-      setR(Math.floor(Math.random() * (255 - 0 + 1) + 0))
-      setG(Math.floor(Math.random() * (255 - 0 + 1) + 0))
-      setB(Math.floor(Math.random() * (255 - 0 + 1) + 0))
+      setR(Math.floor(Math.random() * (245 - 10 + 1) + 10))
+      setG(Math.floor(Math.random() * (245 - 10 + 1) + 10))
+      setB(Math.floor(Math.random() * (245 - 10 + 1) + 10))
       setComplementaryColor('rgb(' + (255-r) + ',' + (255-g) + ',' + (255-b) + ')')
   }
 
@@ -55,10 +57,10 @@ function App() {
           src={pointer} 
           onClick={increase}    
         />*/}
-
+      
       <Header mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor = {complementaryColor}/>
       <MainFrame func={setRandomColor} mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor={complementaryColor}/>
-      
+      <Contact mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor = {complementaryColor}></Contact>
       {/*<Scroll scroll={scrollNumber} />*/}
       
     </div>
