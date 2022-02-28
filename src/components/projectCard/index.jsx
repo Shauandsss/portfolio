@@ -60,19 +60,6 @@ export default (item) => {
             setScrollX(scrollX + imageTagSize)   
     }
 
-   /* useEffect (() => {
-        const setWeight 
-        const loadAll = async () => {
-            setLineWeight((document.getElementsByClassName('container-pc')[0].clientWidth)*(images.length))
-            console.log(lineWeight)
-        }
-        loadAll();
-        document.getElementsByClassName('container-pc')[0].addEventListener("optimizedResize", function() {
-            console.log("Resource conscious resize callback!");
-        });
-    }, []);    
-    let x = document.getElementsByClassName('container-pc')[0]*/
-
     return (
         <div className='container-pc'>
             <div className='title-pc'>
