@@ -18,8 +18,7 @@ function Contact ( props ) {
 
     return (
         <div className="container" id='c0'>
-            <div style={{
-                          color: props.complementaryColor,
+            <div style={{ color: props.complementaryColor,
                           textShadow: '4px 4px 4px ' + props.MainColor,
                           boxShadow: '4px 4px 4px ' + props.MainColor}}  onMouseEnter={visibilityContacts} className='item main-item' content={showContacts ? 'Chat me, gonna be a pleasure' : 'Wanna talk to me?'}>
             </div>

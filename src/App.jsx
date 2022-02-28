@@ -1,38 +1,20 @@
 import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+
 import './App.css';
 import Header from './components/header'
 import MainFrame from './components/mainFrame'
 import Contact from './components/contact'
-/*
-import Scroll from './components/scroll'
-import pointer from './images/pointer.png';*/
+import Projects from './components/projects'
 
 function App() {
-  /*const[scrollNumber, setScrollNumber] = useState(0) 
-  useEffect (() => {
-    document.getElementById('c'+scrollNumber).scrollIntoView({ block: 'end',  behavior: 'smooth' })
-  }, [scrollNumber])
 
 
-  function increase () {
-    setScrollNumber(scrollNumber < 9 ? scrollNumber + 1 : scrollNumber)
-
-  }
-  
-  function decrease () {
-    setScrollNumber(scrollNumber == 0 ? 0 : scrollNumber-1)
-
-  }*/
-
-  const[r, setR] = useState(0);
-  const[g, setG] = useState(0); 
-  const[b, setB] = useState(0);  
+  const[r, setR] = useState(255);
+  const[g, setG] = useState(255); 
+  const[b, setB] = useState(255);  
   const[complementaryColor, setComplementaryColor] = useState(''); 
-
-  useEffect (() => {
-      /*console.log('rgba(' + 'rgb(' + r + ',' + g + ',' + b + ')' + ', .7)')
-      console.log(complementaryColor)*/
-    }, [r,g,b])
 
   const setRandomColor = () => {
       setR(Math.floor(Math.random() * (245 - 10 + 1) + 10))
@@ -43,26 +25,23 @@ function App() {
 
   return (
     <div className="App">
-        {/*<img
-          alt='pointer Down' 
-          className='pointer pointerDown' 
-          src={pointer} 
-          onClick={decrease}
-          style={{opacity: (scrollNumber == 0 ? 0 : 1)}}
-        />
+      <Router>
 
-        <img
-          alt='pointer Up' 
-          className='pointer pointerUp' 
-          src={pointer} 
-          onClick={increase}    
-        />*/}
-      
-      <Header mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor = {complementaryColor}/>
-      <MainFrame func={setRandomColor} mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor={complementaryColor}/>
-      <Contact mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor = {complementaryColor}></Contact>
-      {/*<Scroll scroll={scrollNumber} />*/}
-      
+        <Route path='/'>
+          <Header mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor = {complementaryColor}/>
+        </Route>
+
+        <Route exact path="/portfolio/">
+          <MainFrame func={setRandomColor} mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor={complementaryColor}/>      
+        </Route>
+
+        <Route exact path="/portfolio/projects">
+          <Projects mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor={complementaryColor}/>      
+        </Route>
+
+        <Contact path="*"  mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor = {complementaryColor}></Contact>
+
+      </Router>
     </div>
   );
 }
