@@ -56,7 +56,7 @@ ul{
     transition: .5s;
     transform-style: preserve-3d;
   }
-  .Header--main a:before{
+  .notReadyButtons a:before{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,9 +70,8 @@ ul{
     transition: .5s;
     transform-origin: right;
     transform: translateX(-100%) rotateY(90deg);
-
   }
-  .Header--main a:after{
+  .notReadyButtons a:after{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,13 +86,27 @@ ul{
     transform-origin: left;
     transform: translateX(0) rotateY(0deg);
   }
-  .Header--main a:hover:before{
+  .notReadyButtons a:hover:before{
     transform: translateX(0) rotateY(0deg);
     content: 'Coming soon';
-}
-.Header--main a:hover:after{
+  }
+  .notReadyButtons a:hover:after{
     transform: translateX(100%) rotateY(90deg);
     content: 'Coming soon';
+  }
+
+
+
+  .ReadyButtons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 4vh;
+    width: 8vw;
+    border: 2px solid var(--complementaryColor);
+    color: var(--mainColor);
+    text-shadow: 3px 3px 4px var(--mainColor);
   }
 
 @media (max-width:760px) {

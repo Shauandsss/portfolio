@@ -1,0 +1,99 @@
+.container-pc {
+    color: white;
+    height: 80vh;
+    width: 27vw;
+    margin-top: 6vh;
+    border: 4px solid white;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    margin-right: 2vw;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 2px 2px 40px black;
+    margin-left: 2.6vw;
+    margin-top: 15vh;
+    transition: all ease 0.5s;
+}
+
+.container-pc:hover {
+    transform: scale(1.05);
+}
+
+.title-pc {
+    font-size: calc(1.5vh + 1.5vw + 1.5vmin);   
+    width: 100%;
+    height: 15%;
+}
+
+.container-pc a {
+    text-decoration: none;
+    color: white;
+}
+
+.dataCreated {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: calc(0vh + 1vw + 1vmin);  
+    margin: 1vw;
+    height: 10%;
+}
+
+.readme {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 72%;
+}
+
+.movieRow {
+    display: flex;
+    align-items: center;
+}
+
+.movieRow--listarea {
+    overflow-x: hidden;
+}
+.movieRow--list{
+    transition: all ease 0.5s;
+    display: flex;
+    flex-direction: row;
+}
+.movieRow--item{
+    cursor: pointer;
+}
+.movieRow--item img {
+    transition: all ease 0.2s;
+    width: 100%;
+}
+
+.movieRow--left,
+.movieRow--right {
+    position: absolute;
+    width: 40px;
+    background-color: rgba(0,0,0,0.6);
+    z-index:99;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.movieRow--left {
+    left: 0;
+}
+.movieRow--right {
+    right: 0;
+}
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right {
+    opacity: 1;
+}
+
+@media (max-width:760px) {
+    .movieRow--left,
+    .movieRow--right {
+        opacity: 1;
+    }
+}
