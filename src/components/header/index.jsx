@@ -32,13 +32,13 @@ function Header( props ) {
     
         <ul>{homeButton && 
           <li className='ReadyButtons' > 
-              <a href="/portfolio/" onClick={normalizeColors} onClick={() => showHomeButton(false)} style={someStyle}>Home</a>
+              <Link to="/portfolio/" onClick={normalizeColors} onClick={() => showHomeButton(false)} style={someStyle}>Home</Link>
           </li>}   
           <li className='ReadyButtons' > 
-              <a href="/portfolio/projects" onClick={() => showHomeButton(true)} style={someStyle}>Projects</a>
+              <Link to="/portfolio/projects" onClick={() => showHomeButton(true)} style={someStyle}>Projects</Link>
           </li>   
           <li className='ReadyButtons'>  
-            <a href='/portfolio/aboutme' style={someStyle} target="_blank">About me</a>
+            <Link to='/portfolio/aboutme' style={someStyle} >About me</Link>
           </li>
         </ul>
       </div>

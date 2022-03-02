@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './projects.css';
-//import api from '../../api'
+import api from '../../api'
 import ProjectCard from '../projectCard';
 
 export default () => {
@@ -10,11 +10,11 @@ export default () => {
     useEffect (() => {
         const loadAll = async () => {
             // Pegando a lista TOTAL
-            /*let list = await api.getListRepos();
+            let list = await api.getListRepos();
             list[0].items.sort(function(a,b){
                 return new Date(b.created_at) - new Date(a.created_at);
             })
-            setReposList(list[0]);*/
+            setReposList(list[0]);
         }
         loadAll();
     }, []);
@@ -22,9 +22,9 @@ export default () => {
     return(
         <div className='projects'>
             {reposList && console.log(reposList.items)}
-            {/*reposList && reposList.items.map((item,key)=>(
+            {reposList && reposList.items.map((item,key)=>(
                 <ProjectCard key={item.id} data={item}></ProjectCard>
-            ))*/}
+            ))}
         </div>
     )
 }
