@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-
 import './App.css';
 import Header from './components/header'
 import MainFrame from './components/mainFrame'
 import Contact from './components/contact'
 import Projects from './components/projects'
+import AboutMe from './components/aboutMe'
 
 function App() {
 
@@ -37,6 +37,10 @@ function App() {
 
         <Route exact path="/portfolio/projects">
           <Projects mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor={complementaryColor}/>      
+        </Route>
+
+        <Route exact path="/portfolio/aboutme">
+          <AboutMe></AboutMe>
         </Route>
 
         <Contact path="*"  mainColor={"rgb(" + r + ', ' + g + ', ' + b + ")" } complementaryColor = {complementaryColor}></Contact>

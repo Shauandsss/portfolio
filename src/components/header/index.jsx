@@ -37,8 +37,8 @@ function Header( props ) {
           <li className='ReadyButtons' > 
               <a href="/portfolio/projects" onClick={() => showHomeButton(true)} style={someStyle}>Projects</a>
           </li>   
-          <li className='notReadyButtons'>  
-            <a style={someStyle} target="_blank" title="About me"></a>
+          <li className='ReadyButtons'>  
+            <a href='/portfolio/aboutme' style={someStyle} target="_blank">About me</a>
           </li>
         </ul>
       </div>
