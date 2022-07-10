@@ -3,10 +3,11 @@
     height: 100vh; 
     display: flex;
     background-color: rgb(46, 46, 46);
-
+    
 }
 
 .bg {
+    
     transition: 1s all ease;
     width: 55%;
     transform: skewX(9deg);
@@ -141,10 +142,10 @@
     }
     .meImage img {
         object-fit: cover;
-        height: 60vh;
+        height: 70%;
         position: absolute;
         margin-top: 0vh;
-        width: 100vw;
+        width: 100%;
     }
     .ball {
         margin-left: 50%;
@@ -153,7 +154,7 @@
 }
 
 .ball {
-    margin-top: 30%;
+    margin-top: 20%;
     margin-left: 47%;
     position: absolute;
     top:0px;
@@ -219,7 +220,7 @@
   
 .moving {
     transform-style: preserve-3d;
-    transform-origin: 49vmin 49vmin;
+    transform-origin: 25vmin 25vmin;
     animation: rot 10s linear infinite;
 }
   
